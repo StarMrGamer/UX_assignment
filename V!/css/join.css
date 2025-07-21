@@ -1,0 +1,39 @@
+/* join.css — page only overrides */
+
+.join-section {
+  background-color: #021a1a;
+  color: white;
+  padding: 4rem 0;
+}
+
+.join-section .form-control,
+.join-section .form-select {
+  background-color: #121212;
+  border: 1px solid #2cc295;
+  color: white;
+}
+
+.join-section .form-control::placeholder {
+  color: #aaaaaa;
+}
+
+.join-section .form-control:focus,
+.join-section .form-select:focus {
+  box-shadow: 0 0 0 2px #2cc295;
+  border-color: #2cc295;
+}
+
+/* spacing tweaks */
+.join-section h1 {
+  margin-bottom: 1rem;
+}
+
+.join-section .lead {
+  margin-bottom: 2rem;
+}
+
+.join-section img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}

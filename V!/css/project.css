@@ -1,0 +1,67 @@
+/* project.css */
+/* ————————————————————————————————————————— */
+/* === GLOBAL DARK SECTION OVERRIDES === */
+.project-page,
+.project-section,
+.main-section,
+section {
+  background: #021a1a !important;
+}
+
+/* === SLIDER WRAPPER & TRACK === */
+.project-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+/* flex track: all slides in one row */
+.project-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* each slide takes 100% of wrapper */
+.project-card-slide {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  margin: 0 0.5rem;
+  background: #121212;
+  color: #ffffff;
+  border-radius: 0.75rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* image inside slide */
+.project-card-slide img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* === NAV ARROWS === */
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2cc295;
+  color: #021a1a;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s, color 0.2s;
+}
+.slide-btn:hover {
+  background: #021a1a;
+  color: #ffffff;
+}
+.left-btn  { left: 1rem; }
+.right-btn { right: 1rem; }

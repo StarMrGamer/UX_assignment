@@ -1,0 +1,302 @@
+/* 
+Bootstrap Classes Reference for join.html
+-----------------------------------------
+
+/* Navbar & Dropdown (Components) */
+.navbar             /* Bootstrap navbar container */
+.navbar-expand-lg   /* expand navbar at large (≥992px) breakpoints */
+.navbar-dark        /* dark background navbar with light text */
+.container-fluid    /* full-width container with responsive padding */
+.dropdown           /* container for dropdown toggle + menu */
+.navbar-brand       /* styling for branding link in navbar */
+.dropdown-toggle    /* caret indicator and toggle behavior */
+.dropdown-menu      /* container for dropdown items */
+.dropdown-item      /* individual link styling within dropdown */
+.navbar-toggler      /* button for collapsing navbar on small screens */
+.navbar-toggler-icon/* icon inside the toggler button */
+.collapse           /* collapse behavior for responsive elements */
+.navbar-collapse    /* wrapper for collapsible navbar content */
+
+/* Forms & Inputs */
+.d-flex             /* display: flex utility */
+.ms-auto            /* margin-left: auto (align flex item right) */
+.form-control       /* base input styling (text, email, etc.) */
+.me-2               /* margin-right: .5rem (spacing utility) */
+.btn                /* base button styling */
+.form-select        /* styled <select> dropdown */
+.form-label         /* styling for <label> elements */
+.text-start         /* left-align text */
+
+/* Typography */
+.display-4          /* extra-large heading size */
+.lead               /* slightly larger, lighter paragraph text */
+.text-white         /* set text color to white */
+.text-center        /* center-align text */
+
+/* Layout & Spacing */
+.container          /* fixed-width responsive container */
+.py-5               /* padding-top & padding-bottom: 3rem */
+.mb-4               /* margin-bottom: 1.5rem */
+.mb-3               /* margin-bottom: 1rem */
+.mx-auto            /* horizontal auto margins (centers block) */
+.px-5               /* padding-left & padding-right: 3rem */
+.mt-5               /* margin-top: 3rem */
+.py-3               /* padding-top & padding-bottom: 1rem */
+/* === GLOBAL RESET & BASE === */
+/*
+  The selector "*" matches every element.
+  "::before" and "::after" are pseudo-elements inserted before/after each element’s content.
+  Together, "*,
+  *::before,
+  *::after" zeroes out margin/padding on every element (and its pseudo-elements)
+  and uses "box-sizing: border-box" so padding/borders are included in the element’s width/height.
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* html, body: set full-page dark background & default text color */
+html, body {
+  height: 100%;
+  background: #021a1a !important;    /* dark page background */
+  color: #ffffff;                    /* default text white */
+  font-family: Arial, sans-serif;
+}
+
+/* img: make responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* === NAVBAR STYLES === */
+/*
+  Bootstrap classes used:
+    .navbar, .navbar-expand-lg, .navbar-dark, .custom-navbar
+    .container-fluid
+    .navbar-brand, .nav-link
+    .dropdown-menu, .dropdown-item
+    .navbar-toggler, .navbar-toggler-icon
+    .collapse, .navbar-collapse
+    .d-flex, .ms-auto
+    .form-control, .me-2
+    .btn.robotics-btn
+*/
+.custom-navbar {
+  background-color: #2cc295 !important;
+}
+.navbar-brand,
+.nav-link {
+  color: #333333 !important;
+  transition: color .2s, background .2s;
+}
+.nav-link:hover {
+  color: #ffffff !important;
+  background: #2cc295 !important;
+  border-radius: .25rem;
+  transform: translateY(-2px);
+}
+.dropdown-menu {
+  background: #021a1a !important;
+  border: none;
+}
+.dropdown-item {
+  color: #2cc295 !important;
+  transition: background .2s, color .2s;
+}
+.dropdown-item:hover {
+  background: #2cc295 !important;
+  color: #021a1a !important;
+  border-radius: .25rem;
+}
+
+
+/* === HERO / MAIN SECTION === */
+/*
+  Bootstrap classes used:
+    .main-section (custom)
+    .d-flex, .justify-content-center, .align-items-center, .text-center
+    .display-4, .lead
+*/
+.main-section {
+  min-height: calc(100vh - 112px);   /* fill viewport minus navbar & footer */
+  background: #021a1a !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.main-section .display-4,
+.main-section .lead {
+  color: #ffffff;
+}
+
+
+/* === BUTTON STYLES === */
+/*
+  Bootstrap classes used:
+    .btn, .robotics-btn (custom)
+    .search (custom), .join-btn (custom)
+    .px-5 (horizontal padding)
+*/
+.btn.robotics-btn,
+.btn.search,
+.btn.join-btn {
+  background: #2cc295 !important;
+  color: #021a1a !important;
+  border: none !important;
+  transition: background .3s, box-shadow .3s, transform .3s;
+}
+.btn.robotics-btn:hover,
+.btn.search:hover,
+.btn.join-btn:hover {
+  background: #021a1a !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 0 2px #2cc295 !important;
+  transform: translateY(-2px) !important;
+}
+
+
+/* === FOOTER === */
+/*
+  Bootstrap classes used:
+    .custom-footer (custom)
+    .text-center, .py-3
+*/
+.custom-footer {
+  background: #2cc295 !important;
+  color: #333333 !important;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+
+/* === FORCE DARK SECTION BACKGROUNDS === */
+/* Ensure no white pockets in sections or containers */
+section,
+section.container,
+.project-section,
+.join-section {
+  background: #021a1a !important;
+}
+section.container,
+section.container .row {
+  background: transparent !important;
+}
+
+
+/* === FORM CONTROLS === */
+/*
+  Bootstrap classes used:
+    .form-control, .form-select
+    .mb-3, .mb-4
+    .form-label
+*/
+.form-control,
+.form-select {
+  background: #121212 !important;
+  color: #ffffff !important;
+  border: 1px solid #2cc295 !important;
+}
+.form-control::placeholder {
+  color: #aaaaaa !important;
+}
+.form-control:focus,
+.form-select:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px #2cc295 !important;
+  border-color: #2cc295 !important;
+}
+
+
+/* === PROJECT SLIDER === */
+/*
+  Bootstrap classes used:
+    .container, .row, .align-items-center
+    .col-md-6, .mb-4, .mb-md-0, .me-md-4
+    .project-carousel-wrapper (custom)
+    .project-slider (custom)
+    .project-card-slide (custom)
+    .slide-btn, .left-btn, .right-btn (custom)
+*/
+.project-carousel-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  overflow: hidden;
+}
+.project-card-slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  background: #121212;
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity .4s ease, transform .4s ease;
+  text-align: center;
+}
+.project-card-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+.project-card-slide img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2cc295 !important;
+  color: #021a1a !important;
+  border: none !important;
+  font-size: 2rem;
+  padding: .75rem 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  transition: background .3s, box-shadow .3s;
+}
+.slide-btn:hover {
+  background: #021a1a !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 0 2px #2cc295 !important;
+}
+.left-btn {
+  left: 1rem;
+}
+.right-btn {
+  right: 1rem;
+}
+
+/* === divider above footer === */
+.above-footer {
+  border: none;                   /* remove default hr styling */
+  border-top: 2px solid #000;     /* 2px black line */
+  margin: 0;                      /* no extra space */
+}
