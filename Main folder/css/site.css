@@ -48,46 +48,47 @@ img {
 .custom-navbar .navbar-brand,
 .custom-navbar .nav-link {
   color: #333 !important;
-  transition: transform .2s, background .2s;
+  transition: transform .2s   ;
 }
 .custom-navbar .nav-link:hover {
   background: var(--green) !important;
   color: var(--white) !important;
   transform: translateY(-2px);
 }
+.custom-navbar .navbar-brand.dropdown-toggle:hover {
+  color: white !important;    /* green text on hover */
+  text-decoration: none;        /* remove underline, if any */
+  transition: color .2s ease;
+}
 .dropdown-menu {
   background: var(--dark) !important;
-  border: none;
+  border: 0.1rem solid;
 }
 .dropdown-item {
   color: var(--green) !important;
-  transition: background .2s, color .2s;
+  transition: color .2s;
 }
 .dropdown-item:hover {
   background: var(--green) !important;
   color: var(--dark) !important;
   border-radius: .25rem;
 }
-
 .custom-navbar .dropdown-item.active {
   background-color: #41614D;  /* same background for consistency */
   color: #FFFFFF !important;   /* white text */
   border-radius: .25rem;
-
 }
-
 .custom-footer {
   background: var(--green) !important;
   color: #333 !important;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem 0;  
 }
-
 /* thin line above footer */
 .above-footer {
   border: none;
-  border-top: 1px solid rgba(255,255,255,0.2);
-  margin: 2rem 0 0;
+  border-top: 0.3rem solid #021a1a;
+  margin:0;
 }
 
 /* ——————————————————————————————————————————————————————————————————————————
