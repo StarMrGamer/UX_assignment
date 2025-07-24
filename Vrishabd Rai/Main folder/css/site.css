@@ -12,7 +12,7 @@
 
 /* ——————————————————————————————————————————————————————————————————————————
    1) Variables & Reset
-—————————————————————————————————————————————————————————————————————————— */
+   —————————————————————————————————————————————————————————————————————————— */
 :root {
   --green:   #2cc295;
   --dark:    #021a1a;
@@ -41,28 +41,32 @@ img {
 
 /* ——————————————————————————————————————————————————————————————————————————
    2) Navbar & Footer
-—————————————————————————————————————————————————————————————————————————— */
+   —————————————————————————————————————————————————————————————————————————— */
 .custom-navbar {
   background: var(--green) !important;
 }
 .custom-navbar .navbar-brand,
 .custom-navbar .nav-link {
   color: #333 !important;
-  transition: transform .2s   ;
+  transition: transform .2s;
 }
 .custom-navbar .nav-link:hover {
   background: var(--green) !important;
   color: var(--white) !important;
-  transform: translateY(-2px);
+  /* was translateY(-2px); now: */
+  transform: translateY(-0.125rem);
 }
 .custom-navbar .navbar-brand.dropdown-toggle:hover {
-  color: white !important;    /* green text on hover */
-  text-decoration: none;        /* remove underline, if any */
+  color: var(--white) !important;
+  text-decoration: none;
   transition: color .2s ease;
 }
 .dropdown-menu {
   background: var(--dark) !important;
+  /* already in rem */
   border: 0.1rem solid;
+  /* remove default margin if you like:
+  margin-top: 0; */
 }
 .dropdown-item {
   color: var(--green) !important;
@@ -74,28 +78,33 @@ img {
   border-radius: .25rem;
 }
 .custom-navbar .dropdown-item.active {
-  background-color: #41614D;  /* same background for consistency */
-  color: #FFFFFF !important;   /* white text */
+  background-color: #41614D;
+  color: var(--white) !important;
   border-radius: .25rem;
 }
+
+/* Footer */
 .custom-footer {
   background: var(--green) !important;
   color: #333 !important;
   text-align: center;
-  padding: 1rem 0;  
+  /* already in rem */
+  padding: 1rem 0;
 }
 /* thin line above footer */
 .above-footer {
   border: none;
-  border-top: 0.3rem solid #021a1a;
-  margin:0;
+  /* originally 2px → 0.125rem */
+  border-top: 0.125rem solid var(--dark);
+  margin: 0;
 }
 
 /* ——————————————————————————————————————————————————————————————————————————
    3) Hero / Main Section
-—————————————————————————————————————————————————————————————————————————— */
+   —————————————————————————————————————————————————————————————————————————— */
 .main-section {
-  min-height: calc(100vh - 112px);
+  /* you had 112px header; keep as-is if you prefer */
+  min-height: calc(100vh - 7rem);  /* 7rem ≈ 112px */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,7 +119,7 @@ img {
 
 /* ——————————————————————————————————————————————————————————————————————————
    4) Buttons
-—————————————————————————————————————————————————————————————————————————— */
+   —————————————————————————————————————————————————————————————————————————— */
 .btn {
   transition: transform .2s, box-shadow .2s;
 }
@@ -122,31 +131,33 @@ img {
 .btn.robotics-btn:hover {
   background: var(--dark) !important;
   color: var(--white) !important;
-  box-shadow: 0 0 0 2px var(--green) !important;
-  transform: translateY(-2px);
+  box-shadow: 0 0 0 0.125rem var(--green) !important;
+  transform: translateY(0.3rem);
 }
 
 /* ——————————————————————————————————————————————————————————————————————————
    5) Forms (Join & Contact)
-—————————————————————————————————————————————————————————————————————————— */
+   —————————————————————————————————————————————————————————————————————————— */
 .form-control,
 .form-select {
   background: var(--darker) !important;
   color: var(--white) !important;
-  border: 1px solid var(--green) !important;
+  /* was 1px border → now 0.0625rem */
+  border: 0.0625rem solid var(--green) !important;
 }
 .form-control::placeholder {
   color: #aaa !important;
 }
 .form-control:focus,
 .form-select:focus {
-  box-shadow: 0 0 0 2px var(--green) !important;
+  /* was 2px focus ring → now 0.125rem */
+  box-shadow: 0 0 0 0.125rem var(--green) !important;
   border-color: var(--green) !important;
 }
 
 /* ——————————————————————————————————————————————————————————————————————————
    6) Project Slider
-—————————————————————————————————————————————————————————————————————————— */
+   —————————————————————————————————————————————————————————————————————————— */
 .project-section {
   padding: 2rem 0 4rem;
   text-align: center;
@@ -157,25 +168,29 @@ img {
 }
 .project-carousel-wrapper {
   position: relative;
-  max-width: 900px;
+  max-width: 56.25rem;  /* 900px/16 */
   margin: 0 auto;
   overflow: hidden;
 }
 .project-slider {
   display: flex;
+  /* transition time already in seconds */
   transition: transform .5s ease;
 }
 .project-card {
   flex: 0 0 100%;
   background: var(--darker);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,.5);
+  border-radius: .75rem;  /* 12px/16 */
+  box-shadow: 0 .25rem .75rem rgba(0,0,0,.5); /* 4px/16,12px/16 */
   padding: 1.5rem;
   text-align: center;
 }
 .project-card img {
-  border-radius: 8px;
+  border-radius: .5rem;
   margin-bottom: 1rem;
+  max-width: 100%;
+  max-height: 20rem;
+  height: auto;
 }
 .project-card h4 {
   color: var(--white);
@@ -195,7 +210,7 @@ img {
   border: none;
   border-radius: 50%;
   padding: .5rem .8rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
   z-index: 10;
   transition: background .2s, color .2s;
@@ -204,12 +219,12 @@ img {
   background: var(--dark);
   color: var(--white);
 }
-.left-btn  { left: 1rem; }
+.left-btn  { left: 1rem; }  /* 16px/16 */
 .right-btn { right: 1rem; }
 
 /* ——————————————————————————————————————————————————————————————————————————
    7) Join-Page Specific
-—————————————————————————————————————————————————————————————————————————— */
+   —————————————————————————————————————————————————————————————————————————— */
 .join-section {
   background: var(--dark);
   color: var(--white);
@@ -217,8 +232,14 @@ img {
 }
 .join-section h1,
 .join-section p {
-  color: var(--white);
   margin-bottom: 1rem;
 }
-
-
+.btn.join-btn {
+  color: #F1F1F1 !important;        
+  border: .15rem solid !important;
+  transition: all 0.2s ease;
+}
+.btn.join-btn:hover {
+  background-color: #FFDD57 !important;    
+  color: #021a1a !important;        
+}
