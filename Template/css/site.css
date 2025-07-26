@@ -1,0 +1,100 @@
+/* =============================================================================
+   site.css — Global + page-specific styles for Robotics Club
+   =============================================================================
+   Bootstrap utilities used: 
+   .container-fluid, .navbar-expand-lg, .navbar-dark, .d-flex, .justify-content-center,
+   .align-items-center, .text-center, .display-4, .lead, .btn, .form-control,
+   .form-select, .row, .col-md-6, .mb-3, .mb-4, .mt-4, .mt-5, .py-3, .py-5,
+   .img-fluid, .rounded, .shadow, .dropdown, .dropdown-toggle, .dropdown-menu,
+   .dropdown-item, .navbar-toggler, .navbar-toggler-icon, .collapse,
+   .navbar-collapse, .me-2, .ms-auto, .px-5
+============================================================================= */
+
+/* ——————————————————————————————————————————————————————————————————————————
+   1) Variables & Reset
+   —————————————————————————————————————————————————————————————————————————— */
+:root {
+  --green:   #2cc295;
+  --dark:    #021a1a;
+  --darker:  #121212;
+  --white:   #ffffff;
+  --light:   #dddddd;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  background: var(--dark);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ——————————————————————————————————————————————————————————————————————————
+   2) Navbar & Footer
+   —————————————————————————————————————————————————————————————————————————— */
+.custom-navbar {
+  background: var(--green) !important;
+}
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: #333 !important;
+  transition: transform .2s;
+}
+.custom-navbar .nav-link:hover {
+  background: var(--green) !important;
+  color: var(--white) !important;
+  /* was translateY(-2px); now: */
+  transform: translateY(-0.125rem);
+}
+.custom-navbar .navbar-brand.dropdown-toggle:hover {
+  color: var(--white) !important;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+.dropdown-menu {
+  background: var(--dark) !important;
+  /* already in rem */
+  border: 0.1rem solid;
+  /* remove default margin if you like:
+  margin-top: 0; */
+}
+.dropdown-item {
+  color: var(--green) !important;
+  transition: all .2s;
+}
+.dropdown-item:hover {
+  background: var(--green) !important;
+  color: var(--dark) !important;
+  border-radius: .25rem;
+}
+.custom-navbar .dropdown-item.active {
+  background-color: #41614D;
+  color: var(--white) !important;
+  border-radius: .25rem;
+}
+
+/* Footer */
+.custom-footer {
+  background: var(--green) !important;
+  color: #333 !important;
+  text-align: center;
+  /* already in rem */
+  padding: 1rem 0;
+}
+/* thin line above footer */
+.above-footer {
+  border: none;
+  /* originally 2px → 0.125rem */
+  border-top: 0.125rem solid var(--dark);
+  margin: 0;
+}
