@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Robotics Club | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="../css/site.css" rel="stylesheet"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <div class="container-fluid">
+      <div class="dropdown">
+        <a class="navbar-brand dropdown-toggle" href="#" id="clubDropdown" data-bs-toggle="dropdown">
+          <i class="bi bi-robot robot-icon"></i> Robotics Club
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="index.html">Home</a></li>
+          <li><a class="dropdown-item" href="about.html">About Us</a></li>
+          <li><a class="dropdown-item" href="projects.html">Projects</a></li>
+          <li><a class="dropdown-item" href="achievements.html">Achievements</a></li>
+          <li><a class="dropdown-item active" href="events.html">Events</a></li>
+          <li><a class="dropdown-item" href="workshops.html">Workshops</a></li>
+          <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+          <li><a class="dropdown-item" href="join.html">Join us</a></li>
+          <li><a class="dropdown-item" href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <form class="d-flex ms-auto" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search events..."/>
+          <button class="btn robotics-btn"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container text-center">
+        <h1 class="hero-title">
+          <i class="bi bi-calendar-event"></i> Robotics Events
+        </h1>
+        <p class="hero-subtitle">Join us for exciting competitions, workshops, and tech demonstrations</p>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <div class="container">
+      <h2 class="section-title">Upcoming Events</h2>
+      
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All Events</button>
+        <button class="filter-tab" data-filter="competition">Competitions</button>
+        <button class="filter-tab" data-filter="workshop">Workshops</button>
+        <button class="filter-tab" data-filter="demo">Demonstrations</button>
+      </div>
+
+      <!-- Events Grid -->
+      <div class="row">
+        <!-- Event 1 -->
+        <div class="col-lg-6 col-md-12 event-item" data-category="competition">
+          <div class="event-card">
+            <div class="event-date">
+              <i class="bi bi-calendar3"></i> March 15, 2025
+            </div>
+            <h3 class="event-title">
+              <i class="bi bi-trophy"></i> Regional Robotics Championship
+            </h3>
+            <p class="event-description">
+              Compete against top robotics teams from across the region in this exciting championship. Teams will face challenges in autonomous navigation, object manipulation, and strategy execution.
+            </p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="bi bi-clock"></i> 9:00 AM - 6:00 PM
+              </div>
+              <div class="event-detail">
+                <i class="bi bi-geo-alt"></i> Tech Convention Center
+              </div>
+              <div class="event-detail">
+                <i class="bi bi-people"></i> Teams of 3-5 members
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="event-status status-registration">Registration Open</span>
+              <a href="#" class="register-btn">Register Team</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="col-lg-6 col-md-12 event-item" data-category="workshop">
+          <div class="event-card">
+            <div class="event-date">
+              <i class="bi bi-calendar3"></i> March 8, 2025
+            </div>
+            <h3 class="event-title">
+              <i class="bi bi-gear"></i> AI & Machine Learning Workshop
+            </h3>
+            <p class="event-description">
+              Learn how to integrate AI and machine learning into your robotics projects. Hands-on session covering computer vision, neural networks, and autonomous decision making.
+            </p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="bi bi-clock"></i> 2:00 PM - 5:00 PM
+              </div>
+              <div class="event-detail">
+                <i class="bi bi-geo-alt"></i> Engineering Lab 204
+              </div>
+              <div class="event-detail">
+                <i class="bi bi-person-check"></i> All skill levels welcome
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="event-status status-upcoming">Upcoming</span>
+              <a href="#" class="register-btn">Join Workshop</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="col-lg-6 col-md-12 event-item" data-category="demo">
+          <div class="event-card">
+            <div class="event-date">
+              <i class="bi bi-calendar3"></i> March 22, 2025
+            </div>
+            <h3 class="event-title">
+              <i class="bi bi-cpu"></i> Drone Racing Exhibition
+            </h3>
+            <p class="event-description">
+              Watch high-speed autonomous drones navigate complex obstacle courses. See the latest in flight control systems and real-time path planning algorithms in action.
+            </p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="bi bi-clock"></i> 1:00 PM - 4:00 PM
+              </div>
+              <div class="event-detail">
+                <i class="bi bi-geo-alt"></i> Main Quad
+              </div>
+              <div class="event-detail">
+                <i class="bi bi-eye"></i> Public event
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="event-status status-upcoming">Free Event</span>
+              <a href="#" class="register-btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="col-lg-6 col-md-12 event-item" data-category="competition">
+          <div class="event-card">
+            <div class="event-date">
+              <i class="bi bi-calendar3"></i> April 5, 2025
+            </div>
+            <h3 class="event-title">
+              <i class="bi bi-lightbulb"></i> Innovation Challenge
+            </h3>
+            <p class="event-description">
+              Present your most creative robotics solution to real-world problems. Judges will evaluate innovation, technical execution, and potential impact on society.
+            </p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="bi bi-clock"></i> 10:00 AM - 8:00 PM
+              </div>
+              <div class="event-detail">
+                <i class="bi bi-geo-alt"></i> Innovation Hub
+              </div>
+              <div class="event-detail">
+                <i class="bi bi-award"></i> $5000 prize pool
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="event-status status-upcoming">Coming Soon</span>
+              <a href="#" class="register-btn">Submit Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 5 -->
+        <div class="col-lg-6 col-md-12 event-item" data-category="workshop">
+          <div class="event-card">
+            <div class="event-date">
+              <i class="bi bi-calendar3"></i> February 28, 2025
+            </div>
+            <h3 class="event-title">
+              <i class="bi bi-wrench"></i> Arduino Fundamentals
+            </h3>
+            <p class="event-description">
+              Complete workshop series covering Arduino programming, sensor integration, and motor control. Perfect for beginners looking to start their robotics journey.
+            </p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="bi bi-clock"></i> 6:00 PM - 9:00 PM
+              </div>
+              <div class="event-detail">
+                <i class="bi bi-geo-alt"></i> Maker Space
+              </div>
+              <div class="event-detail">
+                <i class="bi bi-star"></i> Beginner friendly
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="event-status status-past">Completed</span>
+              <a href="#" class="register-btn" style="opacity: 0.6;">View Materials</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 6 -->
+        <div class="col-lg-6 col-md-12 event-item" data-category="demo">
+          <div class="event-card">
+            <div class="event-date">
+              <i class="bi bi-calendar3"></i> April 12, 2025
+            </div>
+            <h3 class="event-title">
+              <i class="bi bi-robot"></i> Humanoid Robot Demo Day
+            </h3>
+            <p class="event-description">
+              Experience the future of robotics with live demonstrations of humanoid robots. See advanced locomotion, human-robot interaction, and collaborative task execution.
+            </p>
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="bi bi-clock"></i> 11:00 AM - 3:00 PM
+              </div>
+              <div class="event-detail">
+                <i class="bi bi-geo-alt"></i> Robotics Lab
+              </div>
+              <div class="event-detail">
+                <i class="bi bi-camera"></i> Photo opportunities
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="event-status status-upcoming">Open House</span>
+              <a href="#" class="register-btn">Reserve Spot</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="custom-footer">
+    &copy; 2025 Robotics Club. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Filter functionality
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const eventItems = document.querySelectorAll('.event-item');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs
+        filterTabs.forEach(t => t.classList.remove('active'));
+        // Add active class to clicked tab
+        tab.classList.add('active');
+
+        const filterValue = tab.getAttribute('data-filter');
+
+        eventItems.forEach(item => {
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.style.display = 'block';
+            item.style.animation = 'fadeIn 0.5s ease-in-out';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Add fade in animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Smooth scroll for register buttons
+    document.querySelectorAll('.register-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Add visual feedback
+        btn.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+          btn.style.transform = 'translateY(-2px)';
+        }, 150);
+      });
+    });
+  </script>
+</body>
+</html>
