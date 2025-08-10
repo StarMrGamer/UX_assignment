@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event/Workshop Sign Up | Robotics Club</title>
+  <style>
+    :root {
+      --green: #2cc295;
+      --dark: #021a1a;
+      --white: #ffffff;
+      --light: #dddddd;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      margin: 0;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background: linear-gradient(135deg, var(--green), var(--dark));
+      padding: 2.5rem 2rem;
+      border-radius: 8px;
+      width: 380px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      text-align: left;
+    }
+
+    .form-container h1 {
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 0.6rem 0.8rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      outline: none;
+      box-shadow: 0 0 5px var(--white);
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .form-button {
+      margin-top: 1.5rem;
+      width: 100%;
+      background: var(--dark);
+      color: var(--green);
+      font-weight: 700;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: 0.3s ease, color 0.3s ease;
+      display: block;
+    }
+
+    .form-button:hover {
+      background: var(--green);
+      color: var(--dark);
+    }
+
+    /* Responsive */
+    @media (max-width: 420px) {
+      .form-container {
+        width: 95%;
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Sign Up for Event/Workshop</h1>
+    <form>
+      <div class="form-group">
+        <label for="fullname" class="form-label">Full Name</label>
+        <input type="text" id="fullname" name="fullname" class="form-input" placeholder="Your full name" required />
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required />
+      </div>
+      <div class="form-group">
+        <label for="event" class="form-label">Select Event/Workshop</label>
+        <select id="event" name="event" class="form-select" required>
+          <option value="" disabled selected>Choose an event</option>
+          <option value="robotics-basics">Robotics Basics</option>
+          <option value="ai-workshop">AI Workshop</option>
+          <option value="coding-challenge">Coding Challenge</option>
+          <option value="drone-flying">Drone Flying</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="notes" class="form-label">Additional Notes (Optional)</label>
+        <textarea id="notes" name="notes" class="form-textarea" placeholder="Any special requirements or questions..."></textarea>
+      </div>
+      <button type="submit" class="form-button">Submit Registration</button>
+    </form>
+  </div>
+</body>
+</html>
+
