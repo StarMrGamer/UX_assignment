@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="../css/site.css" rel="stylesheet"/>
+  <title>Workshop Payment | Robotics Club</title>
+</head>
+<body>
+  <div class="form-centered">
+    <div class="form2-container">
+      <h1 class="form2-title">Workshop Payment</h1>
+      <form id="payment-form">
+        <div class="form2-columns">
+          <!-- Personal Info Column -->
+          <div class="form2-column">
+            <div class="form2-group">
+              <label for="fullname" class="form2-label">Full Name</label>
+              <input type="text" id="fullname" name="fullname" class="form2-input" placeholder="Your full name" required />
+            </div>
+
+            <div class="form2-group">
+              <label for="email" class="form2-label">Email Address</label>
+              <input type="email" id="email" name="email" class="form2-input" placeholder="you@example.com" required />
+            </div>
+
+            <div class="form2-group">
+              <label for="phone" class="form2-label">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form2-input" placeholder="+1234567890" pattern="^\+?[0-9\s\-]{7,15}$" title="Enter a valid phone number" required />
+            </div>
+
+            <div class="form2-group">
+              <label for="address" class="form2-label">Address</label>
+              <textarea id="address" name="address" class="form2-textarea" placeholder="Your full address" rows="3" required></textarea>
+            </div>
+          </div>
+
+          <!-- Card Info Column -->
+          <div class="form2-column">
+            <div class="form2-group">
+              <label for="workshop" class="form2-label">Select Workshop</label>
+              <select id="workshop" name="workshop" class="form2-select" required>
+                <option value="" disabled selected>Choose a workshop</option>
+                <option value="robotics-basics" data-price="50">Introduction to Robotics - $50</option>
+                <option value="ai-workshop" data-price="80">Arduino Programming Masterclass - $80</option>
+                <option value="coding-challenge" data-price="150">Robotic Arm Construction - $150</option>
+                <option value="3d-printing" data-price="100">3D Printing for Robotics - $100</option>
+                <option value="ai-ml" data-price="99">AI & Machine Learning in Robotics - $99</option>
+                <option value="autonomous-drone" data-price="150">Autonomous Drone Development - $150</option>
+              </select>
+            </div>
+
+            <div class="form2-price" id="price-display">Price: $0</div>
+
+            <div class="form2-group">
+              <label for="cardname" class="form2-label">Cardholder Name</label>
+              <input type="text" id="cardname" name="cardname" class="form2-input" placeholder="Name on card" required />
+            </div>
+
+            <div class="form2-group">
+              <label for="cardnumber" class="form2-label">Card Number</label>
+              <input
+                type="text"
+                id="cardnumber"
+                name="cardnumber"
+                class="form2-input"
+                placeholder="1234 5678 9012 3456"
+                maxlength="19"
+                pattern="[\d\s]{13,19}"
+                title="Please enter a valid card number (digits and spaces only)"
+                required
+              />
+            </div>
+
+            <div class="form2-group">
+              <label for="expiry" class="form2-label">Expiry Date (MM/YY)</label>
+              <input
+                type="text"
+                id="expiry"
+                name="expiry"
+                class="form2-input"
+                placeholder="MM/YY"
+                maxlength="5"
+                pattern="^(0[1-9]|1[0-2])\/?([0-9]{2})$"
+                title="Enter expiry date in MM/YY format"
+                required
+              />
+            </div>
+
+            <div class="form2-group">
+              <label for="cvv" class="form2-label">CVV</label>
+              <input
+                type="password"
+                id="cvv"
+                name="cvv"
+                class="form2-input"
+                placeholder="123"
+                maxlength="4"
+                pattern="\d{3,4}"
+                title="3 or 4 digit CVV"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="form2-button">Pay Now</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const workshopSelect = document.getElementById('workshop');
+    const priceDisplay = document.getElementById('price-display');
+
+    workshopSelect.addEventListener('change', () => {
+      const selectedOption = workshopSelect.options[workshopSelect.selectedIndex];
+      const price = selectedOption.getAttribute('data-price') || '0';
+      priceDisplay.textContent = `Price: $${price}`;
+    });
+
+    document.getElementById('payment-form').addEventListener('submit', (e) => {
+      e.preventDefault(); // Prevent actual form submit
+      alert('You have successfully paid!');
+      e.target.reset();
+      priceDisplay.textContent = 'Price: $0';
+    });
+  </script>
+</body>
+</html>
