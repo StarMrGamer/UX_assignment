@@ -732,7 +732,7 @@ video {
 }
 
 .qna-container {
-  max-width: 700px;  /* wider */
+  max-width: 700px;
   margin: 1rem auto;
   padding: 0 1rem;
   background: var(--darker);
@@ -744,7 +744,7 @@ video {
 
 .qna-item, .workshop-qna-item {
   max-width: 600px;
-  margin: 1rem auto; /* center horizontally */
+  margin: 1rem auto;
   border: 2px solid var(--green);
   border-radius: 8px;
   background: var(--darker);
@@ -762,8 +762,8 @@ video {
   background: var(--green);
   color: var(--dark);
   width: 100%;
-  padding: 0.8rem 2rem; /* bigger padding */
-  font-size: 1rem;  /* bigger font */
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   border: none;
@@ -771,7 +771,7 @@ video {
   outline: none;
   transition: 0.3s ease;
   display: flex;
-  justify-content: space-between;  /* space between text and arrow */
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -780,7 +780,7 @@ video {
 }
 
 .arrow {
-  font-size: 14px;    /* smaller size */
+  font-size: 14px;
   line-height: 1;
   margin-left: 0.5rem;
   display: inline-block;
@@ -788,7 +788,6 @@ video {
   transition: transform 0.3s ease;
 }
 
-/* rotate arrow when active */
 .qna-question.active .arrow {
   transform: rotate(180deg);
 }
@@ -796,16 +795,16 @@ video {
 .qna-answer {
   background: var(--dark);
   color: var(--white);
-  padding: 1.5rem 2rem; /* match question padding */
+  padding: 1.5rem 2rem;
   display: none;
   font-size: 1.1rem;
   line-height: 1.6;
 }
 
 .card-img-top {
-  height: 200px;       /* Adjust height as needed */
-  width: 100%;         /* Make it full card width */
-  object-fit: cover;   /* Crop to fill the space without distortion */
+  height: 200px;
+  width: 100%;
+  object-fit: cover; 
 }
 
 .events-container {
@@ -814,7 +813,7 @@ video {
   gap: 1.5rem;
 }
 .event-item {
-  flex: 1 1 300px; /* grow, shrink, basis */
+  flex: 1 1 300px;
   box-sizing: border-box;
 }
 
@@ -893,7 +892,7 @@ video {
 }
 
 .form2-container {
-  width: 900px; /* wider */
+  width: 900px;
   max-width: 95vw;
   padding: 2.5rem 2rem;
   border-radius: 8px;
@@ -905,7 +904,7 @@ video {
 }
 
 .form2-title {
-  text-align: center; /* center the title */
+  text-align: center;
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -965,7 +964,7 @@ video {
   /* background slideshow */
   background-size: cover;
   background-position: center;
-  animation: formBgSlideshow 90s infinite; /* 90 seconds total */
+  animation: formBgSlideshow 90s infinite;
 }
 
 @keyframes formBgSlideshow {
@@ -1010,7 +1009,6 @@ video {
   }
 }
 
-/* Responsive design */
 @media (max-width: 1500px) {
   .workshop-title {
     font-size: 2.5rem;

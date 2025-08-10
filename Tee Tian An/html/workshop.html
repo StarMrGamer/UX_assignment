@@ -334,9 +334,8 @@
             workshopCards.forEach(card => {
               if (filter === 'all' || card.classList.contains(filter)) {
                 card.classList.remove('hidden');
-                // Reset animation to restart it
                 card.style.animation = 'none';
-                card.offsetHeight;  // trigger reflow
+                card.offsetHeight;
                 card.style.animation = 'fadeInFlex 0.5s ease forwards';
               } else {
                 card.classList.add('hidden');
@@ -346,7 +345,6 @@
           });
         });
 
-        // Hover animation on workshop cards (unchanged)
         workshopCards.forEach(card => {
           card.addEventListener('mouseenter', () => {
             card.style.transform = 'translateY(-5px) scale(1.02)';
@@ -358,7 +356,6 @@
           });
         });
 
-        // QnA toggle (unchanged)
         document.querySelectorAll('.qna-question').forEach(button => {
           button.addEventListener('click', () => {
             const answer = button.nextElementSibling;
@@ -375,7 +372,6 @@
         });
       });
 
-      // Add the fadeInFlex keyframes style dynamically
       const style = document.createElement('style');
       style.textContent = `
         .hidden {
